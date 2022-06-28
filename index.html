@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<div>
+    <div style="float: left">
+        Điểm toán : <input type="number" id="diemtoan"><br>
+
+        Điểm lý : <input type="number" id="diemly"><br>
+
+        Điểm hóa : <input type="number" id="diemhoa"><br>
+
+        <button onclick="tongtrungbinh()">Tính tổng trung bình</button>
+
+        <h5>Điểm Trung Bình: <span id="tinhtong"></span></h5>
+
+        <script>
+            function tongtrungbinh(){
+                let diemtoan=+document.getElementById('diemtoan').value
+                let diemly=+document.getElementById('diemhoa').value
+                let diemhoa=+document.getElementById('diemhoa').value
+                let tongtrungbinh = (diemtoan + diemly + diemhoa)/3;
+                document.getElementById("tinhtong").innerHTML=tongtrungbinh
+
+            }
+
+        </script>
+    </div>
+    <div style="float: left;padding:20px">
+        Độ C: <input type="number" id="doc">
+
+        <button onclick="tinhDoF()">Tính độ F</button>
+
+        <h5> Độ F: <span  id="tinhdof"></span></h5>
+
+        <script>
+            function tinhDoF(){
+                let tinhdoc=+document.getElementById('doc').value
+                let doof= 9*tinhdoc/5+32;
+                document.getElementById('tinhdof').innerHTML=doof
+            }
+        </script>
+    </div>
+    <div style="float: left">
+        Bán kính: <input type="number" id="bankinh">
+        <button onclick="tinhDienTich()">Tính S hình tròn</button>
+        <button onclick="tinhChuVi()">Tính Chu Vi</button>
+        <br>
+        <h5>Diện Tích : <span id="dientichhienthi"></span></h5>
+        <h5>Chu Vi: <span id="chuvihienthi"></span></h5>
+        <script>
+            function tinhDienTich(){
+                let r=+document.getElementById('bankinh').value
+                let dientich= r*r*Math.PI;
+                document.getElementById('dientichhienthi').innerHTML=dientich
+            }
+            function tinhChuVi(){
+                let r=+document.getElementById('bankinh').value
+                let chuvi=2*r*Math.PI;
+                document.getElementById('chuvihienthi').innerHTML=chuvi
+            }
+        </script>
+    </div>
+
+</div>
+
+
+</body>
+</html>
